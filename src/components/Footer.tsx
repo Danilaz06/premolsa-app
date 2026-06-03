@@ -52,10 +52,14 @@ export default function Footer() {
 
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-500">&copy; 2024 PREMOLSA – Prefabricados y Moldeados S.A.</p>
-          <nav className="flex gap-5">
+          <nav className="flex gap-5 items-center">
             {[['Aviso legal', '/aviso-legal'], ['Privacidad', '/politica-privacidad'], ['Cookies', '/politica-cookies']].map(([label, href]) => (
               <Link key={href} href={href} className="text-xs text-gray-500 hover:text-gray-300 transition-colors">{label}</Link>
             ))}
+            <Link href="/login" className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1 border border-white/10 px-3 py-1.5 rounded-lg hover:border-white/30">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Área clientes
+            </Link>
           </nav>
         </div>
       </div>

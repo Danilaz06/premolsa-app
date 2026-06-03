@@ -54,8 +54,15 @@ export default function Header() {
             </Link>
           ))}
           <Link
+            href="/login"
+            className="ml-1 px-3.5 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 transition-colors flex items-center gap-1.5"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Área clientes
+          </Link>
+          <Link
             href="/contacto"
-            className="ml-2 px-4 py-2 bg-[#1a56db] text-white text-sm font-semibold rounded-lg hover:bg-[#1341a8] transition-colors"
+            className="ml-1 px-4 py-2 bg-[#1a56db] text-white text-sm font-semibold rounded-lg hover:bg-[#1341a8] transition-colors"
           >
             Solicitar presupuesto
           </Link>
@@ -87,9 +94,17 @@ export default function Header() {
             </Link>
           ))}
           <Link
+            href="/login"
+            onClick={() => setOpen(false)}
+            className="px-4 py-3 rounded-lg text-sm font-medium text-gray-600 flex items-center gap-2"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Área clientes
+          </Link>
+          <Link
             href="/contacto"
             onClick={() => setOpen(false)}
-            className="mt-2 px-4 py-3 bg-[#1a56db] text-white text-sm font-semibold rounded-lg text-center"
+            className="mt-1 px-4 py-3 bg-[#1a56db] text-white text-sm font-semibold rounded-lg text-center"
           >
             Solicitar presupuesto
           </Link>
