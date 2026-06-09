@@ -18,9 +18,9 @@ Web corporativa + área privada de clientes + panel de administración para **PR
 | Base de datos Supabase | ✅ Configurada |
 | Logo oficial PH integrado | ✅ Hecho |
 | Sección Obras/Proyectos | ✅ Hecho |
-| Catálogo con fotos reales | ✅ Hecho (pendiente subir assets) |
-| Seed de productos reales con fichas | ✅ SQL listo (pendiente ejecutar) |
-| **Subida de assets a Supabase Storage** | ⏳ Pendiente service key |
+| Catálogo con fotos reales | ✅ Hecho |
+| Seed de productos reales con fichas | ✅ Cargado (17 productos) |
+| Subida de assets a Supabase Storage | ✅ Hecho (29 archivos) |
 
 **URL de producción:** https://premolsa-app.vercel.app
 **Repo GitHub:** https://github.com/Danilaz06/premolsa-app
@@ -259,7 +259,10 @@ Scripts y archivos relacionados:
 - ✅ Creado `supabase-storage.sql` (buckets) y `scripts/upload-assets.mjs` (subida + optimización).
 - ✅ Creado `supabase-seed-real.sql` con 18 productos reales: 7 con ficha técnica CE (bloques, dinteles, gero) y specs exactas, + bovedilla, semivigueta, vigueta pretensada, placas alveolares, placa tejado, dados, albardilla, ferralla, celosía, separadores.
 - ✅ Creado este README maestro.
-- ⏳ Pendiente: subir assets a Storage (requiere service key un momento) y ejecutar el seed.
+- ✅ **29 assets subidos** a Supabase Storage (14 fotos producto, 9 fichas PDF, 6 obras) vía `scripts/upload-assets.mjs`.
+- ✅ **17 productos reales cargados** en BD vía `scripts/seed.mjs` (upsert idempotente por slug).
+- ✅ Fotos de producto, obras y fichas PDF verificadas online (HTTP 200).
+- ℹ️ `scripts/seed.mjs` es ahora la fuente de verdad del seed (alternativa a `supabase-seed-real.sql`). Para recargar: `node scripts/seed.mjs`.
 
 ### 2026-06-09 (mañana) — Base del proyecto
 - ✅ Migración de HTML estático a Next.js 15 + Supabase + Tailwind.
