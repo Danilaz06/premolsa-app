@@ -25,7 +25,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="w-60 bg-gray-900 text-white flex flex-col fixed top-0 bottom-0 left-0 z-40">
         <div className="p-5 border-b border-white/10">
           <Link href="/" className="flex items-center gap-2.5">
-            <img src="https://premolsa.es/wp-content/uploads/2017/04/cropped-premolsa-logo-1-270x270.jpg" alt="PREMOLSA" className="w-9 h-9 rounded-lg object-cover" />
+            <div className="bg-white rounded-lg px-2 py-1.5">
+              <img src="/logo-premolsa-opt.png" alt="PREMOLSA" className="h-6 w-auto" />
+            </div>
             <div>
               <div className="text-sm font-black text-white">PREMOLSA</div>
               <div className="text-[10px] text-gray-400">Panel Admin</div>

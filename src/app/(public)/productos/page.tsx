@@ -1,3 +1,16 @@
+import { productos as fotos } from '@/lib/assets'
+
+const destacados = [
+  { img: fotos.bloque, name: 'Bloque de hormigón' },
+  { img: fotos.gero, name: 'Gero de hormigón' },
+  { img: fotos.bovedilla, name: 'Bovedilla' },
+  { img: fotos.semivigueta, name: 'Semivigueta armada' },
+  { img: fotos.dintel, name: 'Dintel' },
+  { img: fotos.placaTejado, name: 'Placa de tejado' },
+  { img: fotos.ferralla, name: 'Ferralla' },
+  { img: fotos.dados, name: 'Dados antivehículo' },
+]
+
 const categories = [
   {
     id: 'forjados',
@@ -38,8 +51,15 @@ export default function ProductosPage() {
 
       <section className="py-20">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="rounded-2xl overflow-hidden mb-16 max-h-80">
-            <img src="https://premolsa.es/wp-content/uploads/2017/04/premolsa-prefabricados-4-0.jpg" alt="Productos PREMOLSA" className="w-full h-80 object-cover" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            {destacados.map(p => (
+              <div key={p.name} className="group rounded-xl overflow-hidden border border-gray-200 bg-white">
+                <div className="aspect-square overflow-hidden bg-gray-50">
+                  <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                </div>
+                <div className="px-3 py-2.5 text-center text-sm font-semibold text-gray-700">{p.name}</div>
+              </div>
+            ))}
           </div>
 
           <div className="space-y-14">

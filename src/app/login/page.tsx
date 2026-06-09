@@ -38,11 +38,9 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-950 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <img
-            src="https://premolsa.es/wp-content/uploads/2017/04/cropped-premolsa-logo-1-270x270.jpg"
-            alt="PREMOLSA"
-            className="w-16 h-16 rounded-xl object-cover mx-auto mb-4"
-          />
+          <div className="inline-block bg-white rounded-xl px-5 py-3 mb-4">
+            <img src="/logo-premolsa-opt.png" alt="PREMOLSA" className="h-12 w-auto" />
+          </div>
           <h1 className="text-2xl font-black text-white">Acceso privado</h1>
           <p className="text-gray-400 text-sm mt-1">PREMOLSA – Área de clientes</p>
         </div>

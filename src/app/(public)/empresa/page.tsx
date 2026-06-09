@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const timeline = [
-  { year: '1967', title: 'Fundación de PREMOLSA', desc: 'Nace Prefabricados y Moldeados S.A. en Zaragoza, pionera en la fabricación de vigas y bovedillas de hormigón en Aragón.' },
+  { year: '1967', title: 'Fundación de PREMOLSA', desc: 'Nace Prefabricados y Moldeados S.L. en Zaragoza, pionera en la fabricación de vigas y bovedillas de hormigón en Aragón.' },
   { year: '80s', title: 'Expansión del catálogo', desc: 'Ampliamos la gama con bloques de hormigón, ferralla y accesorios para cubrir todas las necesidades de la obra.' },
   { year: '90s', title: 'Modernización', desc: 'Inversión en maquinaria y procesos de fabricación para aumentar capacidad y mejorar la calidad del producto.' },
   { year: 'CE', title: 'Marcado CE', desc: 'Obtenemos la certificación de Marcado CE, cumpliendo con todas las exigencias de la normativa europea de construcción.' },

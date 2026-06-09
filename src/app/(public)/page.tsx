@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { productos as fotos } from '@/lib/assets'
 
 const features = [
   {
@@ -26,19 +27,19 @@ const features = [
 const products = [
   {
     title: 'Forjados y estructura',
-    img: 'https://premolsa.es/wp-content/uploads/2017/04/20170508_110528.jpg',
+    img: fotos.semivigueta,
     items: ['Semivigueta armada', 'Bovedillas de hormigón, arlita y porexpán', 'Placas alveolares', 'Casetón reticular', 'Viguetas tubulares'],
     href: '/productos#forjados',
   },
   {
     title: 'Albañilería y bloques',
-    img: 'https://premolsa.es/wp-content/uploads/2017/04/20170508_110851.jpg',
+    img: fotos.bloque,
     items: ['Bloques de hormigón prensado', 'Gero de hormigón', 'Placas de tejado o valla', 'Dados antivehículo', 'Piezas de contrapeso'],
     href: '/productos#albanileria',
   },
   {
     title: 'Hierro y ferralla',
-    img: 'https://premolsa.es/wp-content/uploads/2017/04/20170508_112321.jpg',
+    img: fotos.ferralla,
     items: ['Hierro para forjado', 'Ferralla', 'Celosía electrosoldada', 'Mallazo electrosoldado'],
     href: '/productos#hierro',
   },

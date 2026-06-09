@@ -8,6 +8,7 @@ const links = [
   { href: '/', label: 'Inicio' },
   { href: '/empresa', label: 'Empresa' },
   { href: '/productos', label: 'Productos' },
+  { href: '/obras', label: 'Obras' },
   { href: '/galeria', label: 'Galería' },
   { href: '/contacto', label: 'Contacto' },
 ]
@@ -28,13 +29,13 @@ export default function Header() {
       <div className="max-w-[1200px] mx-auto px-6 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="https://premolsa.es/wp-content/uploads/2017/04/cropped-premolsa-logo-1-270x270.jpg"
+            src="/logo-premolsa-opt.png"
             alt="PREMOLSA"
-            className="w-11 h-11 rounded-lg object-cover"
+            className="h-10 w-auto"
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col border-l border-gray-200 pl-3">
             <span className="text-[#1a56db] font-black text-lg leading-none tracking-wide">PREMOLSA</span>
-            <span className="text-gray-500 text-[10px] font-medium tracking-wider">Prefabricados y Moldeados S.A.</span>
+            <span className="text-gray-500 text-[10px] font-medium tracking-wider">Prefabricados y Moldeados S.L.</span>
           </div>
         </Link>
 

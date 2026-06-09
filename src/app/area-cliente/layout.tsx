@@ -15,7 +15,7 @@ export default async function ClienteLayout({ children }: { children: React.Reac
       {/* Top bar */}
       <header className="bg-white border-b border-gray-200 h-16 flex items-center px-6 gap-4 fixed top-0 left-0 right-0 z-40 shadow-sm">
         <Link href="/" className="flex items-center gap-2.5 mr-auto">
-          <img src="https://premolsa.es/wp-content/uploads/2017/04/cropped-premolsa-logo-1-270x270.jpg" alt="PREMOLSA" className="w-9 h-9 rounded-lg object-cover" />
+          <img src="/logo-premolsa-opt.png" alt="PREMOLSA" className="h-8 w-auto" />
           <span className="font-black text-[#1a56db] hidden sm:block">PREMOLSA</span>
         </Link>
         <nav className="flex items-center gap-1">
