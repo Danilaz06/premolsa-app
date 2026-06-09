@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 import { Plus, Pencil, Trash2, Eye, EyeOff, X } from 'lucide-react'
 import type { Product, Category } from '@/lib/types'
+import PdfViewer from '@/components/PdfViewer'
 
 interface Props { products: Product[]; categories: Category[] }
 
@@ -89,7 +90,7 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
                 <td className="px-5 py-3 font-medium text-gray-900">{p.name}</td>
                 <td className="px-5 py-3 text-gray-500">{(p as any).category?.name ?? '—'}</td>
                 <td className="px-5 py-3">
-                  {p.pdf_url ? <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Sí</span> : <span className="text-xs text-gray-400">No</span>}
+                  {p.pdf_url ? <PdfViewer url={p.pdf_url} title={p.name} variant="compact" label="Ver PDF" /> : <span className="text-xs text-gray-400">—</span>}
                 </td>
                 <td className="px-5 py-3">
                   <button onClick={() => toggleVisible(p)} className={`p-1.5 rounded-lg transition-colors ${p.visible ? 'text-green-600 hover:bg-green-50' : 'text-gray-400 hover:bg-gray-100'}`}>

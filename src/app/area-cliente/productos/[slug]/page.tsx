@@ -1,7 +1,8 @@
 import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { Download, ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
+import PdfViewer from '@/components/PdfViewer'
 
 export default async function ProductoFichaPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -36,14 +37,9 @@ export default async function ProductoFichaPage({ params }: { params: Promise<{ 
               <h1 className="text-2xl font-black text-gray-900 mt-3">{product.name}</h1>
             </div>
             {product.pdf_url && (
-              <a
-                href={product.pdf_url}
-                target="_blank"
-                rel="noopener"
-                className="flex-shrink-0 flex items-center gap-2 bg-[#1a56db] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-[#1341a8] transition-colors"
-              >
-                <Download size={16} /> Descargar PDF
-              </a>
+              <div className="flex-shrink-0">
+                <PdfViewer url={product.pdf_url} title={product.name} label="Ver ficha técnica" />
+              </div>
             )}
           </div>
 

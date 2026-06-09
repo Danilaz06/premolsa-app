@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
-import { FileText, Download } from 'lucide-react'
+import { FileText } from 'lucide-react'
+import PdfViewer from '@/components/PdfViewer'
 
 export default async function AreaClientePage() {
   const supabase = await createClient()
@@ -54,20 +55,14 @@ export default async function AreaClientePage() {
                       <div className="flex gap-2 mt-auto">
                         <Link
                           href={`/area-cliente/productos/${product.slug}`}
-                          className="flex-1 text-center text-sm font-medium text-[#1a56db] border border-[#1a56db] py-2 rounded-lg hover:bg-blue-50 transition-colors"
+                          className="flex-1 text-center text-sm font-medium text-gray-600 border border-gray-200 py-2 rounded-lg hover:border-[#1a56db] hover:text-[#1a56db] transition-colors"
                         >
-                          Ver ficha
+                          Detalles
                         </Link>
                         {product.pdf_url && (
-                          <a
-                            href={product.pdf_url}
-                            target="_blank"
-                            rel="noopener"
-                            className="flex items-center gap-1 text-sm font-medium text-white bg-[#1a56db] px-3 py-2 rounded-lg hover:bg-[#1341a8] transition-colors"
-                          >
-                            <Download size={14} />
-                            PDF
-                          </a>
+                          <div className="flex-1">
+                            <PdfViewer url={product.pdf_url} title={product.name} label="Ver ficha" />
+                          </div>
                         )}
                       </div>
                     </div>

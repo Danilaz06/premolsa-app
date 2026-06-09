@@ -251,6 +251,11 @@ Scripts y archivos relacionados:
 
 ## 📝 Registro de cambios (changelog)
 
+### 2026-06-09 (tarde 2) — Visor de PDF integrado
+- ✅ Nuevo componente `src/components/PdfViewer.tsx`: botón que abre el PDF en un **modal a pantalla completa** (iframe), con acciones de descargar, abrir en pestaña nueva y cerrar (Esc/click fuera).
+- ✅ Integrado en: área cliente (lista de fichas + ficha individual) y panel admin (columna PDF de la tabla de productos).
+- ✅ Cliente y admin ven las fichas técnicas sin salir de la web, de forma intuitiva.
+
 ### 2026-06-09 (tarde) — Datos reales e identidad
 - ✅ Corregida razón social **S.A. → S.L.** en header, footer y empresa.
 - ✅ Logo oficial **PH** optimizado (2 MB → 76 KB) e integrado en header, footer, login, admin y área cliente.
