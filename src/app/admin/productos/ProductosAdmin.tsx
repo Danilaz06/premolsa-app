@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Plus, Pencil, Trash2, Eye, EyeOff, X } from 'lucide-react'
 import type { Product, Category } from '@/lib/types'
 import PdfViewer from '@/components/PdfViewer'
+import FileUpload from '@/components/FileUpload'
 
 interface Props { products: Product[]; categories: Category[] }
 
@@ -62,19 +63,19 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
   }
 
   return (
-    <div className="p-8">
-      <div className="flex items-center justify-between mb-8">
+    <div className="p-4 sm:p-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6 sm:mb-8">
         <div>
           <h1 className="text-2xl font-black text-gray-900">Productos</h1>
           <p className="text-gray-500 text-sm">{products.length} productos en total</p>
         </div>
-        <button onClick={openNew} className="flex items-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8] transition-colors">
+        <button onClick={openNew} className="flex items-center justify-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8] transition-colors">
           <Plus size={16} /> Añadir producto
         </button>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+        <table className="w-full text-sm min-w-[560px]">
           <thead className="bg-gray-50 border-b border-gray-200">
             <tr>
               <th className="text-left px-5 py-3 font-semibold text-gray-600">Nombre</th>
@@ -135,14 +136,20 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Descripción</label>
                 <textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} rows={3} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db] resize-none" />
               </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">URL imagen</label>
-                <input value={form.image_url} onChange={e => setForm(f => ({ ...f, image_url: e.target.value }))} placeholder="https://…" className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">URL PDF (Supabase Storage)</label>
-                <input value={form.pdf_url} onChange={e => setForm(f => ({ ...f, pdf_url: e.target.value }))} placeholder="https://…" className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
-              </div>
+              <FileUpload
+                bucket="productos"
+                kind="image"
+                label="Foto del producto"
+                value={form.image_url}
+                onChange={url => setForm(f => ({ ...f, image_url: url }))}
+              />
+              <FileUpload
+                bucket="fichas"
+                kind="pdf"
+                label="Ficha técnica (PDF)"
+                value={form.pdf_url}
+                onChange={url => setForm(f => ({ ...f, pdf_url: url }))}
+              />
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Especificaciones técnicas (JSON)</label>
                 <textarea value={form.specs} onChange={e => setForm(f => ({ ...f, specs: e.target.value }))} rows={5} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm font-mono focus:outline-none focus:border-[#1a56db] resize-none" placeholder={'{\n  "Peso": "15 kg/m²",\n  "Resistencia": "25 MPa"\n}'} />

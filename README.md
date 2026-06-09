@@ -251,6 +251,15 @@ Scripts y archivos relacionados:
 
 ## 📝 Registro de cambios (changelog)
 
+### 2026-06-09 (tarde 3) — Admin intuitivo: subida de archivos + responsive
+- ✅ **Subida de archivos desde el dispositivo** (sin URLs): nuevo `src/components/FileUpload.tsx`. El admin elige una foto o un PDF de su equipo/móvil y se sube solo a Supabase Storage.
+  - Fotos: se optimizan en el navegador (máx. 1400 px, JPEG) antes de subir.
+  - Subida vía API route `src/app/api/admin/upload/route.ts` (usa service role key, verifica rol admin). Robusto, no depende de políticas RLS de Storage.
+  - Integrado en el formulario de productos: los campos "URL imagen" y "URL PDF" se sustituyen por zonas de subida con vista previa, "Cambiar" y "Quitar".
+- ✅ **Panel admin responsive**: nuevo `src/components/AdminShell.tsx` con sidebar fijo en escritorio y **menú hamburguesa + drawer** en móvil/tablet. Item activo resaltado.
+- ✅ Tablas admin con scroll horizontal en móvil y paddings/cabeceras adaptados (`p-4 sm:p-8`).
+- ⚠️ Límite de subida vía API ~4,5 MB (Vercel). Las fichas y fotos optimizadas quedan muy por debajo.
+
 ### 2026-06-09 (tarde 2) — Visor de PDF integrado
 - ✅ Nuevo componente `src/components/PdfViewer.tsx`: botón que abre el PDF en un **modal a pantalla completa** (iframe), con acciones de descargar, abrir en pestaña nueva y cerrar (Esc/click fuera).
 - ✅ Integrado en: área cliente (lista de fichas + ficha individual) y panel admin (columna PDF de la tabla de productos).

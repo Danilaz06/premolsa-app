@@ -48,13 +48,13 @@ export default function ServiciosAdmin({ services: initial }: Props) {
   }
 
   return (
-    <div className="p-8">
-      <div className="flex items-center justify-between mb-8">
+    <div className="p-4 sm:p-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6 sm:mb-8">
         <div>
           <h1 className="text-2xl font-black text-gray-900">Servicios</h1>
           <p className="text-gray-500 text-sm">{services.length} servicios</p>
         </div>
-        <button onClick={openNew} className="flex items-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8]">
+        <button onClick={openNew} className="flex items-center justify-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8]">
           <Plus size={16} /> Añadir servicio
         </button>
       </div>
