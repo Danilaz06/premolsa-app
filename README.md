@@ -251,6 +251,16 @@ Scripts y archivos relacionados:
 
 ## 📝 Registro de cambios (changelog)
 
+### 2026-06-09 (tarde 4) — Identidad verde + galería gestionable
+- ✅ **Color corporativo cambiado a verde** en toda la web (azul `#1a56db` → verde `#15803d`, paleta `blue-*` → `green-*`) vía `scripts/recolor.mjs`.
+- ✅ **Logo oficial VERDE** (`D:\LOGOS\LOGO VERDE.png`) optimizado y puesto en `public/logo-premolsa-opt.png`.
+- ✅ **Galería gestionable desde el admin** (`/admin/galeria`), persistente en BD:
+  - Nueva tabla `gallery` (`image_url`, `caption`, `order`) + bucket Storage `galeria` (`supabase-gallery.sql`).
+  - Subir fotos desde el dispositivo, editar descripción, **reordenar** (subir/bajar) y eliminar. Todo persiste en BD.
+  - La página pública `/galeria` ahora lee de la tabla `gallery` (antes fotos fijas).
+  - `scripts/seed-gallery.mjs` sube una selección de fotos reales de instalaciones y las carga.
+- ⏳ Pendiente: ejecutar `supabase-gallery.sql` (crea tabla `gallery`) y luego `node scripts/seed-gallery.mjs`.
+
 ### 2026-06-09 (tarde 3) — Admin intuitivo: subida de archivos + responsive
 - ✅ **Subida de archivos desde el dispositivo** (sin URLs): nuevo `src/components/FileUpload.tsx`. El admin elige una foto o un PDF de su equipo/móvil y se sube solo a Supabase Storage.
   - Fotos: se optimizan en el navegador (máx. 1400 px, JPEG) antes de subir.

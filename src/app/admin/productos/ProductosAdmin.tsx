@@ -69,7 +69,7 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
           <h1 className="text-2xl font-black text-gray-900">Productos</h1>
           <p className="text-gray-500 text-sm">{products.length} productos en total</p>
         </div>
-        <button onClick={openNew} className="flex items-center justify-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8] transition-colors">
+        <button onClick={openNew} className="flex items-center justify-center gap-2 bg-[#15803d] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#166534] transition-colors">
           <Plus size={16} /> Añadir producto
         </button>
       </div>
@@ -99,7 +99,7 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
                   </button>
                 </td>
                 <td className="px-5 py-3 flex items-center gap-1 justify-end">
-                  <button onClick={() => openEdit(p)} className="p-1.5 text-gray-400 hover:text-[#1a56db] hover:bg-blue-50 rounded-lg transition-colors"><Pencil size={16} /></button>
+                  <button onClick={() => openEdit(p)} className="p-1.5 text-gray-400 hover:text-[#15803d] hover:bg-green-50 rounded-lg transition-colors"><Pencil size={16} /></button>
                   <button onClick={() => handleDelete(p.id)} className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"><Trash2 size={16} /></button>
                 </td>
               </tr>
@@ -119,22 +119,22 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Nombre *</label>
-                <input required value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value, slug: slugify(e.target.value) }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
+                <input required value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value, slug: slugify(e.target.value) }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Slug</label>
-                <input value={form.slug} onChange={e => setForm(f => ({ ...f, slug: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db] font-mono" />
+                <input value={form.slug} onChange={e => setForm(f => ({ ...f, slug: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d] font-mono" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Categoría *</label>
-                <select required value={form.category_id} onChange={e => setForm(f => ({ ...f, category_id: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]">
+                <select required value={form.category_id} onChange={e => setForm(f => ({ ...f, category_id: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]">
                   <option value="">Seleccionar…</option>
                   {categories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                 </select>
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Descripción</label>
-                <textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} rows={3} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db] resize-none" />
+                <textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} rows={3} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d] resize-none" />
               </div>
               <FileUpload
                 bucket="productos"
@@ -152,7 +152,7 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
               />
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Especificaciones técnicas (JSON)</label>
-                <textarea value={form.specs} onChange={e => setForm(f => ({ ...f, specs: e.target.value }))} rows={5} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm font-mono focus:outline-none focus:border-[#1a56db] resize-none" placeholder={'{\n  "Peso": "15 kg/m²",\n  "Resistencia": "25 MPa"\n}'} />
+                <textarea value={form.specs} onChange={e => setForm(f => ({ ...f, specs: e.target.value }))} rows={5} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm font-mono focus:outline-none focus:border-[#15803d] resize-none" placeholder={'{\n  "Peso": "15 kg/m²",\n  "Resistencia": "25 MPa"\n}'} />
               </div>
               <div className="flex items-center gap-2">
                 <input type="checkbox" id="visible" checked={form.visible} onChange={e => setForm(f => ({ ...f, visible: e.target.checked }))} className="w-4 h-4" />
@@ -161,7 +161,7 @@ export default function ProductosAdmin({ products: initial, categories }: Props)
               {error && <p className="text-red-600 text-sm bg-red-50 p-3 rounded-lg">{error}</p>}
               <div className="flex gap-3 pt-2">
                 <button type="button" onClick={() => setOpen(false)} className="flex-1 border border-gray-200 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">Cancelar</button>
-                <button type="submit" disabled={loading} className="flex-1 bg-[#1a56db] text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8] disabled:opacity-60">{loading ? 'Guardando…' : 'Guardar'}</button>
+                <button type="submit" disabled={loading} className="flex-1 bg-[#15803d] text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-[#166534] disabled:opacity-60">{loading ? 'Guardando…' : 'Guardar'}</button>
               </div>
             </form>
           </div>

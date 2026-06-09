@@ -10,9 +10,9 @@ export const metadata = {
 export default function ObrasPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-gray-900 to-blue-950 py-24 text-white text-center">
+      <section className="bg-gradient-to-br from-gray-900 to-green-950 py-24 text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-blue-300 bg-blue-300/15 px-3 py-1 rounded-full mb-4">Proyectos</span>
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-green-300 bg-green-300/15 px-3 py-1 rounded-full mb-4">Proyectos</span>
           <h1 className="text-4xl font-black mb-4">Obras realizadas</h1>
           <p className="text-white/70 text-lg">Más de medio siglo suministrando prefabricados de hormigón a las principales promociones de Zaragoza y Aragón.</p>
         </div>
@@ -27,7 +27,7 @@ export default function ObrasPage() {
                   <img src={obra.img} alt={obra.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
                 <div className="p-6">
-                  <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[#1a56db] bg-blue-50 px-2.5 py-1 rounded-full mb-3">{obra.type}</span>
+                  <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-[#15803d] bg-green-50 px-2.5 py-1 rounded-full mb-3">{obra.type}</span>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">{obra.title}</h3>
                   <p className="flex items-center gap-1.5 text-sm text-gray-500">
                     <MapPin size={14} /> {obra.location}
@@ -40,7 +40,7 @@ export default function ObrasPage() {
           <div className="mt-16 bg-gray-50 border border-gray-200 rounded-2xl p-10 text-center">
             <h2 className="text-2xl font-black text-gray-900 mb-3">¿Tu obra es la siguiente?</h2>
             <p className="text-gray-500 max-w-xl mx-auto mb-6">Te asesoramos en el cálculo de estructuras y te suministramos el material en obra al ritmo que necesites.</p>
-            <Link href="/contacto" className="inline-block px-7 py-3.5 bg-[#1a56db] text-white font-semibold rounded-lg hover:bg-[#1341a8] transition-colors">
+            <Link href="/contacto" className="inline-block px-7 py-3.5 bg-[#15803d] text-white font-semibold rounded-lg hover:bg-[#166534] transition-colors">
               Solicitar presupuesto
             </Link>
           </div>

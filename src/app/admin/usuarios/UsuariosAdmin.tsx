@@ -45,7 +45,7 @@ export default function UsuariosAdmin({ users: initial }: Props) {
           <h1 className="text-2xl font-black text-gray-900">Clientes</h1>
           <p className="text-gray-500 text-sm">{users.length} clientes con acceso</p>
         </div>
-        <button onClick={() => { setOpen(true); setError(''); setSuccess('') }} className="flex items-center justify-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8]">
+        <button onClick={() => { setOpen(true); setError(''); setSuccess('') }} className="flex items-center justify-center gap-2 bg-[#15803d] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#166534]">
           <Plus size={16} /> Crear cliente
         </button>
       </div>
@@ -92,21 +92,21 @@ export default function UsuariosAdmin({ users: initial }: Props) {
             <form onSubmit={handleCreate} className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Nombre completo</label>
-                <input value={fullName} onChange={e => setFullName(e.target.value)} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" placeholder="Empresa o persona" />
+                <input value={fullName} onChange={e => setFullName(e.target.value)} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" placeholder="Empresa o persona" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
-                <input required type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
+                <input required type="email" value={email} onChange={e => setEmail(e.target.value)} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Contraseña *</label>
-                <input required type="password" value={password} onChange={e => setPassword(e.target.value)} minLength={8} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" placeholder="Mínimo 8 caracteres" />
+                <input required type="password" value={password} onChange={e => setPassword(e.target.value)} minLength={8} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" placeholder="Mínimo 8 caracteres" />
               </div>
               {error && <p className="text-red-600 text-sm bg-red-50 p-3 rounded-lg">{error}</p>}
               {success && <p className="text-green-700 text-sm bg-green-50 p-3 rounded-lg">{success}</p>}
               <div className="flex gap-3 pt-2">
                 <button type="button" onClick={() => setOpen(false)} className="flex-1 border border-gray-200 py-2.5 rounded-lg text-sm font-semibold text-gray-600">Cancelar</button>
-                <button type="submit" disabled={loading} className="flex-1 bg-[#1a56db] text-white py-2.5 rounded-lg text-sm font-semibold disabled:opacity-60">{loading ? 'Creando…' : 'Crear cliente'}</button>
+                <button type="submit" disabled={loading} className="flex-1 bg-[#15803d] text-white py-2.5 rounded-lg text-sm font-semibold disabled:opacity-60">{loading ? 'Creando…' : 'Crear cliente'}</button>
               </div>
             </form>
           </div>

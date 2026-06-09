@@ -54,7 +54,7 @@ export default function ServiciosAdmin({ services: initial }: Props) {
           <h1 className="text-2xl font-black text-gray-900">Servicios</h1>
           <p className="text-gray-500 text-sm">{services.length} servicios</p>
         </div>
-        <button onClick={openNew} className="flex items-center justify-center gap-2 bg-[#1a56db] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8]">
+        <button onClick={openNew} className="flex items-center justify-center gap-2 bg-[#15803d] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#166534]">
           <Plus size={16} /> Añadir servicio
         </button>
       </div>
@@ -69,7 +69,7 @@ export default function ServiciosAdmin({ services: initial }: Props) {
             </div>
             <div className="flex items-center gap-1 flex-shrink-0">
               <button onClick={() => toggleVisible(s)} className={`p-1.5 rounded-lg ${s.visible ? 'text-green-600' : 'text-gray-400'}`}>{s.visible ? <Eye size={16}/> : <EyeOff size={16}/>}</button>
-              <button onClick={() => openEdit(s)} className="p-1.5 text-gray-400 hover:text-[#1a56db] rounded-lg"><Pencil size={16}/></button>
+              <button onClick={() => openEdit(s)} className="p-1.5 text-gray-400 hover:text-[#15803d] rounded-lg"><Pencil size={16}/></button>
               <button onClick={() => handleDelete(s.id)} className="p-1.5 text-gray-400 hover:text-red-600 rounded-lg"><Trash2 size={16}/></button>
             </div>
           </div>
@@ -86,20 +86,20 @@ export default function ServiciosAdmin({ services: initial }: Props) {
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Título *</label>
-                <input required value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
+                <input required value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Descripción *</label>
-                <textarea required value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} rows={3} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db] resize-none" />
+                <textarea required value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} rows={3} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d] resize-none" />
               </div>
               <div className="flex gap-3">
                 <div className="flex-1">
                   <label className="block text-sm font-semibold text-gray-700 mb-1">Icono (emoji)</label>
-                  <input value={form.icon} onChange={e => setForm(f => ({ ...f, icon: e.target.value }))} placeholder="🏗️" className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
+                  <input value={form.icon} onChange={e => setForm(f => ({ ...f, icon: e.target.value }))} placeholder="🏗️" className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" />
                 </div>
                 <div className="w-24">
                   <label className="block text-sm font-semibold text-gray-700 mb-1">Orden</label>
-                  <input type="number" value={form.order} onChange={e => setForm(f => ({ ...f, order: Number(e.target.value) }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#1a56db]" />
+                  <input type="number" value={form.order} onChange={e => setForm(f => ({ ...f, order: Number(e.target.value) }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#15803d]" />
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function ServiciosAdmin({ services: initial }: Props) {
               </div>
               <div className="flex gap-3 pt-2">
                 <button type="button" onClick={() => setOpen(false)} className="flex-1 border border-gray-200 py-2.5 rounded-lg text-sm font-semibold text-gray-600">Cancelar</button>
-                <button type="submit" disabled={loading} className="flex-1 bg-[#1a56db] text-white py-2.5 rounded-lg text-sm font-semibold disabled:opacity-60">{loading ? 'Guardando…' : 'Guardar'}</button>
+                <button type="submit" disabled={loading} className="flex-1 bg-[#15803d] text-white py-2.5 rounded-lg text-sm font-semibold disabled:opacity-60">{loading ? 'Guardando…' : 'Guardar'}</button>
               </div>
             </form>
           </div>

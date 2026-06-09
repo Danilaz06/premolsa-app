@@ -55,7 +55,7 @@ export default async function AreaClientePage() {
                       <div className="flex gap-2 mt-auto">
                         <Link
                           href={`/area-cliente/productos/${product.slug}`}
-                          className="flex-1 text-center text-sm font-medium text-gray-600 border border-gray-200 py-2 rounded-lg hover:border-[#1a56db] hover:text-[#1a56db] transition-colors"
+                          className="flex-1 text-center text-sm font-medium text-gray-600 border border-gray-200 py-2 rounded-lg hover:border-[#15803d] hover:text-[#15803d] transition-colors"
                         >
                           Detalles
                         </Link>

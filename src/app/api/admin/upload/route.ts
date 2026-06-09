@@ -6,7 +6,7 @@ function sanitize(name: string) {
     .replace(/\.[^.]+$/, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 50) || 'archivo'
 }
 
-const ALLOWED = ['productos', 'fichas', 'obras']
+const ALLOWED = ['productos', 'fichas', 'obras', 'galeria']
 
 export async function POST(req: Request) {
   // Verificar que es admin

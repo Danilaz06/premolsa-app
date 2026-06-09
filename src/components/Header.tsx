@@ -34,7 +34,7 @@ export default function Header() {
             className="h-10 w-auto"
           />
           <div className="flex flex-col border-l border-gray-200 pl-3">
-            <span className="text-[#1a56db] font-black text-lg leading-none tracking-wide">PREMOLSA</span>
+            <span className="text-[#15803d] font-black text-lg leading-none tracking-wide">PREMOLSA</span>
             <span className="text-gray-500 text-[10px] font-medium tracking-wider">Prefabricados y Moldeados S.L.</span>
           </div>
         </Link>
@@ -47,8 +47,8 @@ export default function Header() {
               href={l.href}
               className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                 pathname === l.href
-                  ? 'bg-blue-50 text-[#1a56db]'
-                  : 'text-gray-700 hover:bg-blue-50 hover:text-[#1a56db]'
+                  ? 'bg-green-50 text-[#15803d]'
+                  : 'text-gray-700 hover:bg-green-50 hover:text-[#15803d]'
               }`}
             >
               {l.label}
@@ -63,7 +63,7 @@ export default function Header() {
           </Link>
           <Link
             href="/contacto"
-            className="ml-1 px-4 py-2 bg-[#1a56db] text-white text-sm font-semibold rounded-lg hover:bg-[#1341a8] transition-colors"
+            className="ml-1 px-4 py-2 bg-[#15803d] text-white text-sm font-semibold rounded-lg hover:bg-[#166534] transition-colors"
           >
             Solicitar presupuesto
           </Link>
@@ -88,7 +88,7 @@ export default function Header() {
               href={l.href}
               onClick={() => setOpen(false)}
               className={`px-4 py-3 rounded-lg text-sm font-medium ${
-                pathname === l.href ? 'bg-blue-50 text-[#1a56db]' : 'text-gray-700'
+                pathname === l.href ? 'bg-green-50 text-[#15803d]' : 'text-gray-700'
               }`}
             >
               {l.label}
@@ -105,7 +105,7 @@ export default function Header() {
           <Link
             href="/contacto"
             onClick={() => setOpen(false)}
-            className="mt-1 px-4 py-3 bg-[#1a56db] text-white text-sm font-semibold rounded-lg text-center"
+            className="mt-1 px-4 py-3 bg-[#15803d] text-white text-sm font-semibold rounded-lg text-center"
           >
             Solicitar presupuesto
           </Link>

@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { Upload, FileText, X, Loader2, CheckCircle2 } from 'lucide-react'
 
 interface Props {
-  bucket: 'productos' | 'fichas' | 'obras'
+  bucket: 'productos' | 'fichas' | 'obras' | 'galeria'
   kind: 'image' | 'pdf'
   value: string
   onChange: (url: string) => void
@@ -93,11 +93,11 @@ export default function FileUpload({ bucket, kind, value, onChange, label }: Pro
             <p className="flex items-center gap-1.5 text-sm font-medium text-green-700">
               <CheckCircle2 size={15} /> Archivo subido
             </p>
-            <a href={value} target="_blank" rel="noopener" className="text-xs text-gray-500 hover:text-[#1a56db] truncate block">
+            <a href={value} target="_blank" rel="noopener" className="text-xs text-gray-500 hover:text-[#15803d] truncate block">
               Ver archivo
             </a>
           </div>
-          <button type="button" onClick={() => inputRef.current?.click()} className="text-xs font-medium text-[#1a56db] hover:underline px-2">
+          <button type="button" onClick={() => inputRef.current?.click()} className="text-xs font-medium text-[#15803d] hover:underline px-2">
             Cambiar
           </button>
           <button type="button" onClick={clear} className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg" title="Quitar">
@@ -109,7 +109,7 @@ export default function FileUpload({ bucket, kind, value, onChange, label }: Pro
           type="button"
           onClick={() => inputRef.current?.click()}
           disabled={status === 'uploading'}
-          className="w-full flex flex-col items-center justify-center gap-2 border-2 border-dashed border-gray-300 rounded-lg py-6 text-gray-500 hover:border-[#1a56db] hover:text-[#1a56db] hover:bg-blue-50/40 transition-colors disabled:opacity-60"
+          className="w-full flex flex-col items-center justify-center gap-2 border-2 border-dashed border-gray-300 rounded-lg py-6 text-gray-500 hover:border-[#15803d] hover:text-[#15803d] hover:bg-green-50/40 transition-colors disabled:opacity-60"
         >
           {status === 'uploading' ? (
             <>

@@ -38,3 +38,11 @@ export interface Service {
   order: number
   visible: boolean
 }
+
+export interface GalleryItem {
+  id: string
+  image_url: string
+  caption: string | null
+  order: number
+  created_at: string
+}

@@ -35,7 +35,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-950 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-green-950 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-block bg-white rounded-xl px-5 py-3 mb-4">
@@ -54,7 +54,7 @@ export default function LoginPage() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="correo@ejemplo.com"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#1a56db] focus:ring-2 focus:ring-blue-100 transition-all"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#15803d] focus:ring-2 focus:ring-green-100 transition-all"
             />
           </div>
           <div className="mb-6">
@@ -65,7 +65,7 @@ export default function LoginPage() {
               value={password}
               onChange={e => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#1a56db] focus:ring-2 focus:ring-blue-100 transition-all"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#15803d] focus:ring-2 focus:ring-green-100 transition-all"
             />
           </div>
 
@@ -78,14 +78,14 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 bg-[#1a56db] text-white font-semibold rounded-lg hover:bg-[#1341a8] transition-colors disabled:opacity-60"
+            className="w-full py-3 bg-[#15803d] text-white font-semibold rounded-lg hover:bg-[#166534] transition-colors disabled:opacity-60"
           >
             {loading ? 'Accediendo…' : 'Entrar'}
           </button>
 
           <p className="text-center text-xs text-gray-400 mt-5">
             ¿No tienes acceso?{' '}
-            <a href="tel:976292347" className="text-[#1a56db] font-medium hover:underline">
+            <a href="tel:976292347" className="text-[#15803d] font-medium hover:underline">
               Contacta con nosotros
             </a>
           </p>

@@ -18,7 +18,7 @@ export default async function ProductoFichaPage({ params }: { params: Promise<{ 
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-12">
-      <Link href="/area-cliente" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#1a56db] mb-8 transition-colors">
+      <Link href="/area-cliente" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#15803d] mb-8 transition-colors">
         <ArrowLeft size={16} /> Volver a fichas técnicas
       </Link>
 
@@ -30,7 +30,7 @@ export default async function ProductoFichaPage({ params }: { params: Promise<{ 
           <div className="flex items-start justify-between gap-4 mb-6">
             <div>
               {product.category && (
-                <span className="text-xs font-bold uppercase tracking-widest text-[#1a56db] bg-blue-50 px-2.5 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#15803d] bg-green-50 px-2.5 py-1 rounded-full">
                   {product.category.name}
                 </span>
               )}

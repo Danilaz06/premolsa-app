@@ -14,9 +14,9 @@ export default function ContactoPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-gray-900 to-blue-950 py-24 text-white text-center">
+      <section className="bg-gradient-to-br from-gray-900 to-green-950 py-24 text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-blue-300 bg-blue-300/15 px-3 py-1 rounded-full mb-4">Estamos aquí</span>
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-green-300 bg-green-300/15 px-3 py-1 rounded-full mb-4">Estamos aquí</span>
           <h1 className="text-4xl font-black mb-4">Contacto</h1>
           <p className="text-white/70 text-lg">Solicita presupuesto o visítanos en Zaragoza.</p>
         </div>
@@ -35,11 +35,11 @@ export default function ContactoPage() {
               { icon: '🕐', label: 'Horario', value: 'Lunes a viernes: 8:00 – 18:00 h', href: null },
             ].map(item => (
               <div key={item.label} className="flex gap-4 mb-6">
-                <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-xl flex-shrink-0">{item.icon}</div>
+                <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center text-xl flex-shrink-0">{item.icon}</div>
                 <div>
                   <div className="text-sm font-semibold text-gray-800">{item.label}</div>
                   {item.href ? (
-                    <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener" className="text-sm text-gray-500 hover:text-[#1a56db] whitespace-pre-line transition-colors">{item.value}</a>
+                    <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener" className="text-sm text-gray-500 hover:text-[#15803d] whitespace-pre-line transition-colors">{item.value}</a>
                   ) : (
                     <span className="text-sm text-gray-500">{item.value}</span>
                   )}
@@ -48,7 +48,7 @@ export default function ContactoPage() {
             ))}
 
             <a href="https://maps.google.com/?q=41.656722,-0.852474" target="_blank" rel="noopener"
-              className="inline-flex items-center gap-2 bg-[#1a56db] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1341a8] transition-colors mt-2 mb-6">
+              className="inline-flex items-center gap-2 bg-[#15803d] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#166534] transition-colors mt-2 mb-6">
               📍 Cómo llegar
             </a>
 
@@ -76,26 +76,26 @@ export default function ContactoPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Nombre *</label>
-                    <input required value={form.nombre} onChange={e => setForm(f => ({ ...f, nombre: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#1a56db]" />
+                    <input required value={form.nombre} onChange={e => setForm(f => ({ ...f, nombre: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#15803d]" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Empresa</label>
-                    <input value={form.empresa} onChange={e => setForm(f => ({ ...f, empresa: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#1a56db]" />
+                    <input value={form.empresa} onChange={e => setForm(f => ({ ...f, empresa: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#15803d]" />
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Teléfono *</label>
-                    <input required type="tel" value={form.telefono} onChange={e => setForm(f => ({ ...f, telefono: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#1a56db]" />
+                    <input required type="tel" value={form.telefono} onChange={e => setForm(f => ({ ...f, telefono: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#15803d]" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
-                    <input type="email" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#1a56db]" />
+                    <input type="email" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#15803d]" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-1">Tipo de consulta</label>
-                  <select value={form.tipo} onChange={e => setForm(f => ({ ...f, tipo: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#1a56db]">
+                  <select value={form.tipo} onChange={e => setForm(f => ({ ...f, tipo: e.target.value }))} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#15803d]">
                     <option value="">Seleccionar…</option>
                     <option>Forjados y estructura</option>
                     <option>Albañilería y bloques</option>
@@ -106,13 +106,13 @@ export default function ContactoPage() {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-1">Mensaje *</label>
-                  <textarea required value={form.mensaje} onChange={e => setForm(f => ({ ...f, mensaje: e.target.value }))} rows={4} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#1a56db] resize-none" />
+                  <textarea required value={form.mensaje} onChange={e => setForm(f => ({ ...f, mensaje: e.target.value }))} rows={4} className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#15803d] resize-none" />
                 </div>
                 <div className="flex items-start gap-2">
                   <input type="checkbox" required id="privacidad" checked={form.privacidad} onChange={e => setForm(f => ({ ...f, privacidad: e.target.checked }))} className="mt-0.5 w-4 h-4" />
-                  <label htmlFor="privacidad" className="text-xs text-gray-500">He leído y acepto la <a href="/politica-privacidad" className="text-[#1a56db] underline">política de privacidad</a>.</label>
+                  <label htmlFor="privacidad" className="text-xs text-gray-500">He leído y acepto la <a href="/politica-privacidad" className="text-[#15803d] underline">política de privacidad</a>.</label>
                 </div>
-                <button type="submit" disabled={loading} className="w-full py-3 bg-[#1a56db] text-white font-semibold rounded-lg hover:bg-[#1341a8] transition-colors disabled:opacity-60">
+                <button type="submit" disabled={loading} className="w-full py-3 bg-[#15803d] text-white font-semibold rounded-lg hover:bg-[#166534] transition-colors disabled:opacity-60">
                   {loading ? 'Enviando…' : 'Enviar mensaje'}
                 </button>
               </form>

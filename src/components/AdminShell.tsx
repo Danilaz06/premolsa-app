@@ -3,12 +3,13 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import LogoutButton from '@/components/LogoutButton'
-import { LayoutDashboard, Package, Wrench, Users, Menu, X } from 'lucide-react'
+import { LayoutDashboard, Package, Wrench, Users, Image as ImageIcon, Menu, X } from 'lucide-react'
 
 const navItems = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/admin/productos', label: 'Productos', icon: Package },
   { href: '/admin/servicios', label: 'Servicios', icon: Wrench },
+  { href: '/admin/galeria', label: 'Galería', icon: ImageIcon },
   { href: '/admin/usuarios', label: 'Usuarios', icon: Users },
 ]
 
@@ -45,7 +46,7 @@ export default function AdminShell({
               href={item.href}
               onClick={() => setOpen(false)}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                active ? 'bg-[#1a56db] text-white' : 'text-gray-300 hover:bg-white/10 hover:text-white'
+                active ? 'bg-[#15803d] text-white' : 'text-gray-300 hover:bg-white/10 hover:text-white'
               }`}
             >
               <item.icon size={18} />

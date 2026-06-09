@@ -11,7 +11,7 @@ export default async function AdminDashboard() {
   ])
 
   const stats = [
-    { label: 'Productos', value: products ?? 0, icon: Package, href: '/admin/productos', color: 'bg-blue-500' },
+    { label: 'Productos', value: products ?? 0, icon: Package, href: '/admin/productos', color: 'bg-green-600' },
     { label: 'Servicios', value: services ?? 0, icon: Wrench, href: '/admin/servicios', color: 'bg-emerald-500' },
     { label: 'Clientes', value: users ?? 0, icon: Users, href: '/admin/usuarios', color: 'bg-violet-500' },
   ]
@@ -44,13 +44,13 @@ export default async function AdminDashboard() {
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <h2 className="font-bold text-gray-900 mb-4">Acciones rápidas</h2>
           <div className="space-y-2">
-            <Link href="/admin/productos?new=1" className="flex items-center gap-2 text-sm text-[#1a56db] hover:underline">
+            <Link href="/admin/productos?new=1" className="flex items-center gap-2 text-sm text-[#15803d] hover:underline">
               <Package size={16} /> Añadir nuevo producto
             </Link>
-            <Link href="/admin/servicios?new=1" className="flex items-center gap-2 text-sm text-[#1a56db] hover:underline">
+            <Link href="/admin/servicios?new=1" className="flex items-center gap-2 text-sm text-[#15803d] hover:underline">
               <Wrench size={16} /> Añadir nuevo servicio
             </Link>
-            <Link href="/admin/usuarios?new=1" className="flex items-center gap-2 text-sm text-[#1a56db] hover:underline">
+            <Link href="/admin/usuarios?new=1" className="flex items-center gap-2 text-sm text-[#15803d] hover:underline">
               <Users size={16} /> Crear nuevo cliente
             </Link>
           </div>
@@ -58,7 +58,7 @@ export default async function AdminDashboard() {
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <h2 className="font-bold text-gray-900 mb-4">Web pública</h2>
           <p className="text-sm text-gray-500 mb-4">Ver cómo ven los visitantes la web de PREMOLSA.</p>
-          <Link href="/" target="_blank" className="text-sm text-[#1a56db] hover:underline flex items-center gap-1">
+          <Link href="/" target="_blank" className="text-sm text-[#15803d] hover:underline flex items-center gap-1">
             Abrir web →
           </Link>
         </div>
